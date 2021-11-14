@@ -1,3 +1,8 @@
-.casa{
-  width:120px;
+.casa {
+  width: 120px;
+}
+
+.heroe-img {
+  -webkit-box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.54);
+  box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.54);
 }

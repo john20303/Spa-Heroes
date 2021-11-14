@@ -4,12 +4,14 @@ import {HomeComponent} from "./component/home/home.component";
 import {HeroesComponent} from "./component/heroes/heroes.component";
 import {AboutComponent} from "./component/about/about.component";
 import {HeroeComponent} from "./component/heroe/heroe.component";
+import {BuscadorComponent} from "./component/buscador/buscador.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
     { path: 'heroes', component: HeroesComponent },
     { path: 'heroe/:id', component: HeroeComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'buscador/:id', component: BuscadorComponent },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
