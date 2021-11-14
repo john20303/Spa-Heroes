@@ -1,0 +1,14 @@
+<h1><strong>Heroes</strong> de Marvel y DC</h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-4 g-4 mb-2">
+  <div class="col" *ngFor="let heroe of heroes; index as i;">
+    <div class="card animated fadeIn fast">
+      <img [src]="heroe.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+      </div>
+    <button type="button" class="btn btn-outline-danger m-3" (click)="verHeroe(i)">Ver mas...</button>
+    </div>
+  </div>
+</div>
