@@ -1,14 +1,7 @@
 <h1><strong>Heroes</strong> de Marvel y DC</h1>
 <hr>
+<!--*ngFor="let heroe of heroes; index as i;"-->
 <div class="row row-cols-1 row-cols-md-4 g-4 my-2">
-  <div class="col" *ngFor="let heroe of heroes; index as i;">
-    <div class="card animated fadeIn fast p-2 heroe-img">
-      <img [src]="heroe.img" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{heroe.nombre}}</h5>
-        <p class="card-text">{{heroe.bio}}</p>
-      </div>
-    <button type="button" class="btn btn-outline-danger m-3" (click)="verHeroe(i)">Ver mas...</button>
-    </div>
-  </div>
+  <app-heroe-tarjeta [heroe]="ejemplo" [index]="i" *ngFor="let ejemplo of heroes; index as i;"></app-heroe-tarjeta>
+  <!--Aqui ponemos la palabra ejemplo, para mostrar que la variable que tiene poder es la variable heroe, que viene de tarjeta-->
 </div>

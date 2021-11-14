@@ -5,14 +5,15 @@
   El heroe {{heroe}}  no esta disponible!!!
 </div>
 <div class="row row-cols-1 row-cols-md-4 g-4 my-2">
-  <div class="col" *ngFor="let heroe of heroes; index as i;">
-    <div class="card animated fadeIn fast p-2 heroe-img">
-      <img [src]="heroe.img" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{heroe.nombre}}</h5>
-        <p class="card-text">{{heroe.bio}}</p>
-      </div>
-      <button type="button" class="btn btn-outline-danger m-3">Ver mas...</button>
-    </div>
-  </div>
+<!--  <div class="col" *ngFor="let heroe of heroes; index as i;">-->
+<!--    <div class="card animated fadeIn fast p-2 heroe-img">-->
+<!--      <img [src]="heroe.img" class="card-img-top" alt="...">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">{{heroe.nombre}}</h5>-->
+<!--        <p class="card-text">{{heroe.bio}}</p>-->
+<!--      </div>-->
+<!--      <button type="button" class="btn btn-outline-danger m-3">Ver mas...</button>-->
+<!--    </div>-->
+<!--  </div>-->
+  <app-heroe-tarjeta [index]="i" [heroe]="foo" *ngFor="let foo of heroes; index as i;"></app-heroe-tarjeta>
 </div>

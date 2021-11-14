@@ -1,0 +1,12 @@
+<div class="col">
+  <div class="card animated fadeIn fast p-2 heroe-img">
+    <img [src]="heroe.img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{heroe.nombre}}</h5>
+      <p class="card-text">{{heroe.bio}}</p>
+    </div>
+    <button type="button" class="btn btn-outline-danger m-3" (click)="verHeroe()">Ver mas...</button>
+  </div>
+</div>
+
+<!--(click)="verHeroe(i)"-->

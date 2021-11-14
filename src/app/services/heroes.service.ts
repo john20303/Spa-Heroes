@@ -72,9 +72,11 @@ export class HeroesService {
   buscarHeroe(termino: string) {
     let heroesArr: Heroes[] = [];// Creamos un arreglo vacio donde  almacenaremos nuestros heroes.
     termino = termino.toLowerCase(); // Tomamos nuestro dato  que viene desde el search y o pasamos a lower case,
-    for (let heroe of this.heroes) { //creamos una variable heroes y barremos todos los heroes buscando nuestro nuevo heroe
+    for (let i=0; i<this.heroes.length; i++) { //creamos una variable heroes y barremos todos los heroes buscando nuestro nuevo heroe
+     let heroe = this.heroes[i];
       let nombre = heroe.nombre.toLowerCase();//Creamos una variable nombre  y pasamos nuestro heroe a lowercase para compararlo con el que viene como parametro.
       if (nombre.indexOf(termino) >= 0) {//Si el nombre que tomamos de la iteracción de heroes que se llama heroe se encuentra en termino
+        heroe.id = i;
         heroesArr.push(heroe);//lo agregamos a nuestro array heroesArr de forma temporal!
       }
     }
